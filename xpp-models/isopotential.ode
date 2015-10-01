@@ -61,7 +61,7 @@ aux Inap=Inap
 
 # I is set to -12 (=Ihold) initially, see below   
 global 1 t-10 {I=Ipulse}  
-global 1 t-510 {I=Ihold}  
+#global 1 t-510 {I=Ihold}  
 
 # initial V for settled at I=-12 (easiest way is to get this is to save "info" from File menu)
 # initial gate values from respective inf values at initial V
