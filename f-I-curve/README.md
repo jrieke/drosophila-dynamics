@@ -1,0 +1,2 @@
+Simulated /NeuroML2/isopotential_NeuroML2/run.xml with varying current pulses from 10 ms to 510 ms. Spike times analyzed using OMV tests at a threshold of -25 mV.
+.dat files contain raw data output, where filename is Ipulse. Columns in .dat files are: t / ms, V / mV, I / pA
