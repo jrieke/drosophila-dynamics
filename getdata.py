@@ -25,6 +25,8 @@ filenames = [
 		'f-I-curve/separate runs/45pA.dat', 
 		'f-I-curve/separate runs/50pA.dat', 
 		'f-I-curve/separate runs/5pA.dat', 
+		'rheobase/silence_to_tonic.dat',
+		'rheobase/tonic_to_silence.dat'
 		# TODO: These do not work because they are >150 MB, thus Google Drive returns a html page where you have to accept the download.
 		# Possible workaround: Fetching files directly via https://googledrive.com/host/file-id downloads the files directly without showing the html prompt
 		#'rheobase/-1.90pA.dat',
