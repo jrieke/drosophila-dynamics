@@ -60,15 +60,30 @@ mtauNap(V) = 1
 aux Inap=Inap
 
 # I is set to -12 (=Ihold) initially, see below   
-global 1 t-10 {I=Ipulse}  
+global 1 t-10 {I=50}   
+global 1 t-500 {I=45}  
+global 1 t-1000 {I=40}  
+global 1 t-1500 {I=35}  
+global 1 t-2000 {I=30}  
+global 1 t-2500 {I=25}  
+global 1 t-3000 {I=20}  
+global 1 t-3500 {I=15}  
+global 1 t-4000 {I=10}  
+global 1 t-4500 {I=5}  
+global 1 t-5000 {I=0}  
+global 1 t-5500 {I=-1.2}  
+global 1 t-6000 {I=-1.9}  
+global 1 t-6500 {I=-2.4}
+global 1 t-7000 {I=-2.7}  
+global 1 t-7500 {I=-2.72}
 #global 1 t-510 {I=Ihold}  
 
 # initial V for settled at I=-12 (easiest way is to get this is to save "info" from File menu)
 # initial gate values from respective inf values at initial V
 init V=-54.56137733296305, MKS=0.10958410153422569, MKF=0.0061144119486309977, HKF=0.83111678624803209, HKF2=0.99900082893646969, MNA=0.054660015811734484, HNA=0.91740767131784051, MNAP=0.17168333245095557
 
-@ total=530,bounds=10000000000,meth=euler,dt=.001, nout=100, maxstor=10000000  
+@ total=8000,bounds=10000000000,meth=euler,dt=.001, nout=100, maxstor=10000000  
 
-par I=-12 c=4 Ipulse=0 Ihold=-12
+par I=-12 c=4 Ipulse=-1.9 Ihold=-12
 par gleak=6.8 eleak=-55
 done 
