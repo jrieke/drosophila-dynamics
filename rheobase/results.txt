@@ -1,7 +1,0 @@
-Ipulse / pA	activity
--1.90	sustained firing after ~2.7 s
--1.905	no spike up to 5 s
--1.91	no spike up to 5 s
--1.93	no spike up to 5 s
--1.95	no spike up to 5 s
--2	no spike up to 5 s
