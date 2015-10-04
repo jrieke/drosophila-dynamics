@@ -1,4 +1,4 @@
-- **/separate runs**: Isopotential model (NeuroML2). Current pulse from 10 ms to 510 ms with varying amplitudes (see file names). Spike times extracted from OMV tests at a threshold of -25 mV (see *spike times.txt*). Columns in .dat files: t / s, V / V, I / A
+- **/separate runs**: Isopotential model (NeuroML2). Current pulse from 10 ms to 510 ms with varying amplitudes (see file names). Columns in .dat files: t / s, V / V, I / A
 
 
 - **increasing.dat**: Isopotential model (XPP). Multiple current steps with increasing amplitudes, in XPP: 

@@ -14,7 +14,7 @@
 
     <Target component="sim1" />
 
-    <Simulation id="sim1" length="5000ms" step="0.001ms" target="network">      
+    <Simulation id="sim1" length="530ms" step="0.001ms" target="network">      
         <Display id="d1" title="Membrane Potential" timeScale="1ms" xmin="0" xmax="5000" ymin="-55" ymax="-5">
             <Line id="v" quantity="pop[0]/v" scale="1mV"  color="#ffffff" timeScale="1ms" />
         </Display>

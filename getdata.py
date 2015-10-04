@@ -11,9 +11,9 @@ folder_url = 'https://googledrive.com/host/0B2xSDxvcBl6KLWVTd0lLZ2E5Rmc/'
 filenames = [
 		'f-I-curve/decreasing.dat', 
 		'f-I-curve/increasing.dat',
-		'f-I-curve/separate runs/-12pA.dat',
+		'f-I-curve/separate runs/-1.80pA.dat',
+		'f-I-curve/separate runs/-1.50pA.dat', 
 		'f-I-curve/separate runs/-1pA.dat', 
-		'f-I-curve/separate runs/-5pA.dat', 
 		'f-I-curve/separate runs/0pA.dat', 
 		'f-I-curve/separate runs/10pA.dat', 
 		'f-I-curve/separate runs/15pA.dat', 
@@ -27,10 +27,9 @@ filenames = [
 		'f-I-curve/separate runs/5pA.dat', 
 		'rheobase/silence_to_tonic.dat',
 		'rheobase/tonic_to_silence.dat'
-		# TODO: These do not work because they are >150 MB, thus Google Drive returns a html page where you have to accept the download.
+		# TODO: Files >150 MB do not work because Google Drive returns a html page where you have to accept the download.
 		# Possible workaround: Fetching files directly via https://googledrive.com/host/file-id downloads the files directly without showing the html prompt
-		#'rheobase/-1.90pA.dat',
-		#'rheobase/-1.91pA.dat'
+		
 	]
 
 

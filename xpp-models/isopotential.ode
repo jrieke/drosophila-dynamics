@@ -61,18 +61,13 @@ aux Inap=Inap
 
 # I is set to -12 (=Ihold) initially, see below   
 global 1 t-10 {I=-1.80}
-global 1 t-5000 {I=-2.70}
-global 1 t-10000 {I=-2.71}
-global 1 t-15000 {I=-2.72}
-global 1 t-20000 {I=-2.73}
-global 1 t-25000 {I=-2.74}
 #global 1 t-510 {I=Ihold}  
 
 # initial V for settled at I=-12 (easiest way is to get this is to save "info" from File menu)
 # initial gate values from respective inf values at initial V
 init V=-54.56137733296305, MKS=0.10958410153422569, MKF=0.0061144119486309977, HKF=0.83111678624803209, HKF2=0.99900082893646969, MNA=0.054660015811734484, HNA=0.91740767131784051, MNAP=0.17168333245095557
 
-@ total=30000,bounds=10000000000,meth=euler,dt=.001, nout=100, maxstor=10000000  
+@ total=5000,bounds=10000000000,meth=euler,dt=.001, nout=100, maxstor=10000000  
 
 par I=-12 c=4 Ipulse=-1.9 Ihold=-12
 par gleak=6.8 eleak=-55
