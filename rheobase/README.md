@@ -18,3 +18,6 @@
 		global 1 t-25000 {I=-2.74}
 
   \* Finer increments between -1.80 pA and -2.70 pA did not affect the results
+
+
+- **\*pA_to_\*pA**: Isopotential model (XPP). Start at the first current value, then go to the second current value after 500 ms.
