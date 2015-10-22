@@ -1,10 +1,15 @@
 import auto
 n = auto.load('drosophila')
 
-init = auto.run(n,c='integra')()[-1]
-eq = auto.run(init, c='eq_I')
-eq += auto.run(init, c='eq_I', DS='-')
-eq = auto.relabel(auto.merge(eq))
+init = auto.run(n,c='integra')()[-1] #integrate ivp to start from stable eq 
+eq = auto.run(init, c='eq_I') # eq continuation in I
+eq += auto.run(init, c='eq_I', DS='-') # on the other direction 
+eq = auto.relabel(auto.merge(eq)) # get a single curve with unique labels
 
-tube = auto.run(eq('HB1'), IPS=2, DS='-', IPLT=-1, ILP=0, STOP=['PD1'])
-auto.plot(eq+tube, bifurcation_x=['I'], bifurcation_y=['V', 'MAX V', 'MIN V'], stability=True, use_labels=False)
+# continuation of per orbits, starting from Hopf 
+tube = auto.run(eq('HB1'), IPS=2, IPLT=-1, ILP=0, STOP=['PD1'])
+
+auto.plot(eq + tube, 
+	bifurcation_x=['I'],
+	bifurcation_y=['V', 'MAX V', 'MIN V'],
+	stability=True, use_labels=False)
