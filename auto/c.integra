@@ -1,0 +1,14 @@
+parnames = {1:'I', 2:'gleak', 3:'Eleak', 4:'freq', 5:'Iks', 6:'Ikf', 7:'INa', 8:'INap'}
+unames = {1:'V', 2:'mKs', 3: 'mKf', 4: 'hKf', 5:'hKf2', 6:'mNa', 7:'hNa', 8:'mNaP'}
+
+NDIM = 8, IPS = -2, IRS = 0, ILP = 1
+ICP = [1] #, 2, 3, 4, 5, 6 , 7]
+
+NTST = 50, NCOL = 4, IAD = 3, ISP =  2, ISW = 1, IPLT = 1
+NMX = 50000, NPR = 10000, IID = 2, ITMX = 10, ITNW = 7, NWTN = 5
+
+EPSL = 1e-7, EPSU = 1e-7, EPSS = 1e-5
+DS = 0.001, DSMIN = 1e-9, DSMAX = 0.1, IADS = 1
+
+PAR = {'I':-12}
+
