@@ -13,3 +13,9 @@ auto.plot(eq + tube,
 	bifurcation_x=['I'],
 	bifurcation_y=['V', 'MAX V', 'MIN V'],
 	stability=True, use_labels=False)
+
+# tracking saddle-node in 2par
+lp = auto.run(eq('LP1'), c='lp')
+lp += auto.run(eq('LP1'), c='lp', DS='-')
+lp = auto.merge(lp)
+auto.plot(lp, bifurcation_x='I', bifurcation_y='gleak', use_labels=False)

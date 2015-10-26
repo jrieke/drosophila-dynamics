@@ -1,0 +1,16 @@
+parnames = {1:'I', 2: 'gleak'}
+unames = {1:'V', 2:'mKs', 3: 'mKf', 4: 'hKf', 5:'hKf2', 6:'mNa', 7:'hNa', 8:'mNaP'}
+
+NDIM = 8, IPS = 1, IRS = 0, ILP = 0
+ICP = ['I', 'gleak', 'PERIOD']
+
+NTST = 50, NCOL = 4, IAD = 3, ISP =  2, ISW = 2, IPLT = 0
+NMX = 60000, NPR = 1000, IID = 2, ITMX = 10, ITNW = 7, NWTN = 3
+
+EPSL = 1e-7, EPSU = 1e-7, EPSS = 1e-5
+DS = 0.01, DSMIN = 1e-10, DSMAX = 0.05, IADS = 1
+
+NPAR = 11 
+
+STOP = ['CP2']
+UZSTOP = {'I': [-20, 20], 'gleak': [-10.,20]}
