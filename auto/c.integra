@@ -3,8 +3,9 @@ unames = {1:'V', 2:'mKs', 3: 'mKf', 4: 'hKf', 5:'hKf2', 6:'mNa', 7:'hNa', 8:'mNa
 
 NDIM = 8, IPS = -2, IRS = 0, ILP = 1
 ICP = [1] #, 2, 3, 4, 5, 6 , 7]
+# IPS=-2 means time integration using euler
 
-NTST = 50, NCOL = 4, IAD = 3, ISP =  2, ISW = 1, IPLT = 1
+NTST = 50, NCOL = 4, IAD = 3, ISP =  2, ISW = 1, IPLT = -1  # Show min or max of the ith variable
 NMX = 50000, NPR = 10000, IID = 2, ITMX = 10, ITNW = 7, NWTN = 5
 
 EPSL = 1e-7, EPSU = 1e-7, EPSS = 1e-5

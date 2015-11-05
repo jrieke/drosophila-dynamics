@@ -110,9 +110,10 @@ int pvls (integer ndim, const doublereal *u, doublereal *par)
   double Ina = gNa*pow(mNa,3)*hNa*(V-ENa);
   double Inap= gNaP*mNaP*(V-ENa);
 
-  doublereal f = 1.0/par[10];
+  doublereal f = 1.0/par[10];  // par[10] is always period in auto
   par[NP] = isnan(f) ? 0.0 : f;
 
+  // Set additional parameters for output.
   par[NP+1] = Iks;
   par[NP+2] = Ikf;
   par[NP+3] = Ina;
