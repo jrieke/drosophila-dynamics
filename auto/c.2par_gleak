@@ -13,4 +13,4 @@ DS = 0.01, DSMIN = 1e-10, DSMAX = 0.05, IADS = 1
 NPAR = 11 
 
 STOP = ['CP2']
-UZSTOP = {'I': [-20, 20], 'gleak': [-10.,20]}
+UZSTOP = {'I': [-20, 70], 'gleak': [-10, 20]}

@@ -11,4 +11,3 @@ double I_0 = -12.;
 double gleak_0 = 6.8;
 double Eleak_0 = -55.;
 unsigned int NP = 3;
-

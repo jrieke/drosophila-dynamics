@@ -1,0 +1,14 @@
+parnames = {1:'I', 2: 'gleak', 3:'Eleak', 4:'freq'}
+unames = {1:'V', 2:'mKs', 3: 'mKf', 4: 'hKf', 5:'hKf2', 6:'mNa', 7:'hNa', 8:'mNaP'}
+
+NDIM = 8, IPS = 2, IRS = 0, ILP = 0  # IPS=2 detects periodic solutions
+ICP = ['I', 'PERIOD', 'gleak', 'Eleak', 'freq']
+
+NTST = 200, NCOL = 4, IAD = 3, ISP =  2, ISW = 1, IPLT = -1
+NMX = 5000, NPR = 1000, IID = 2, ITMX = 10, ITNW = 7, NWTN = 3
+
+EPSL = 1e-8, EPSU = 1e-8, EPSS = 1e-6
+DS = 0.01, DSMIN = 1e-10, DSMAX = 0.02, IADS = 1
+
+UZSTOP = {'I': [-20, 70], 'PERIOD': [0, 100]}
+STOP = ['PD1']
