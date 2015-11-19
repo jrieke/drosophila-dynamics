@@ -12,15 +12,15 @@ int func (integer ndim, const doublereal *u, const integer *icp,
 
 
     double I = par[0];
-    // double gKs = par[1];
+    // double Eleak = par[2];
     // double EK = par[2];
-    // double gKf = par[3];
     // double fh = par[4];
     // double ENa = par[5];
-    // double gNa = par[6];
-    // double gNaP = par[7];
     double gleak = par[1];
-    double Eleak = par[2];
+    double gKs = par[2];
+    double gKf = par[3];
+    double gNa = par[4];
+    double gNaP = par[5];
 
     double V = u[0];
     double mKs = u[1];
@@ -73,12 +73,17 @@ int stpnt (integer ndim, doublereal t,
            doublereal *u, doublereal *par)
 {
 
+  // TODO: Try to output all parameter values here, so that it's easier to check them.
 
-  par[0] = I_0;
-  par[1] = gleak_0;
-  par[2] = Eleak_0;
+  // par[0] = I_0;
+  // par[1] = gleak_0;
+  // par[2] = gKs_0;
+  // par[3] = gKf_0;
+  // par[4] = gNa_0;
+  // par[5] = gNaP_0;
 
-  /* steady state for I_0 = -12, from xpp code  */
+
+  /* steady state for I = -12, from xpp code  */
   u[0] = -54.56137733296305;
   u[1] = 0.1095841015345856;
   u[2] = 0.006114411948700807;
@@ -96,28 +101,37 @@ int stpnt (integer ndim, doublereal t,
 int pvls (integer ndim, const doublereal *u, doublereal *par)
 {
 
-  double V = u[0];
-  double mKs = u[1];
-  double mKf = u[2];
-  double hKf = u[3];
-  double hKf2 = u[4];
-  double mNa = u[5];
-  double hNa = u[6];
-  double mNaP = u[7];
+  // These values are now set through the PAR argument.
 
-  double Iks = gKs*pow(mKs,4)*(V-EK);
-  double Ikf = gKf*pow(mKf,4)*(fh*hKf + (1.-fh)*hKf2)*(V-EK);
-  double Ina = gNa*pow(mNa,3)*hNa*(V-ENa);
-  double Inap= gNaP*mNaP*(V-ENa);
+  // double V = u[0];
+  // double mKs = u[1];
+  // double mKf = u[2];
+  // double hKf = u[3];
+  // double hKf2 = u[4];
+  // double mNa = u[5];
+  // double hNa = u[6];
+  // double mNaP = u[7];
 
-  doublereal f = 1.0/par[10];  // par[10] is always period in auto
-  par[NP] = isnan(f) ? 0.0 : f;
+  // double gKs = par[2];
+  // double gKf = par[3];
+  // double gNa = par[4];
+  // double gNaP = par[5];
+
+  // double Iks = gKs*pow(mKs,4)*(V-EK);
+  // double Ikf = gKf*pow(mKf,4)*(fh*hKf + (1.-fh)*hKf2)*(V-EK);
+  // double Ina = gNa*pow(mNa,3)*hNa*(V-ENa);
+  // double Inap= gNaP*mNaP*(V-ENa);
+
 
   // Set additional parameters for output.
-  par[NP+1] = Iks;
-  par[NP+2] = Ikf;
-  par[NP+3] = Ina;
-  par[NP+4] = Inap;
+
+  doublereal f = 1.0/par[10];  // par[10] is always period in auto
+  par[NP] = isnan(f) ? 0.0 : f;  // frequency
+
+  // par[NP+1] = Iks;
+  // par[NP+2] = Ikf;
+  // par[NP+3] = Ina;
+  // par[NP+4] = Inap;
 
   return 0;
 }

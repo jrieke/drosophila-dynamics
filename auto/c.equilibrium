@@ -1,8 +1,8 @@
-parnames = {1:'I', 2: 'gleak', 3:'Eleak', 4:'freq'}
+parnames = {1:'I', 2:'gleak', 3:'gKs', 4: 'gKf', 5: 'gNa', 6: 'gNaP', 7:'freq'}  # , 8:'Iks', 9:'Ikf', 10:'INa', 11:'INap'
 unames = {1:'V', 2:'mKs', 3: 'mKf', 4: 'hKf', 5:'hKf2', 6:'mNa', 7:'hNa', 8:'mNaP'}
 
 NDIM = 8, IPS = 1, IRS = 0, ILP = 1
-ICP = ['I', 'PERIOD', 'gleak', 'Eleak', 'freq']  # other parameters except for 'I' will just be displayed; single parameter continuation of equilibrium due to IPS=1
+ICP = ['I', 'PERIOD', 'freq', 2, 3, 4, 5, 6, 7]  # other parameters except for 'I' will just be displayed; single parameter continuation of equilibrium due to IPS=1
 
 NTST = 200, NCOL = 4, IAD = 3, ISP =  2, ISW = 1, IPLT = 1
 NMX = 50000, NPR = 1000, IID = 2, ITMX = 10, ITNW = 7, NWTN = 3
@@ -10,4 +10,6 @@ NMX = 50000, NPR = 1000, IID = 2, ITMX = 10, ITNW = 7, NWTN = 3
 EPSL = 1e-8, EPSU = 1e-8, EPSS = 1e-6
 DS = 0.01, DSMIN = 1e-10, DSMAX = 0.02, IADS = 1
 
-UZSTOP = {'I': [-20, 70]}
+UZSTOP = {'I': [-20, 100]}
+
+PAR = {'gleak': 6.8, 'gKs': 50, 'gKf': 24.1, 'gNa': 100, 'gNaP': 0.8}
