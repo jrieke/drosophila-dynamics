@@ -13,4 +13,4 @@ DS = 0.01, DSMIN = 1e-10, DSMAX = 0.02, IADS = 1
 UZSTOP = {'I': [-20, 100], 'PERIOD': [0, 100]}
 STOP = ['PD1']
 
-PAR = {'gleak': 6.8, 'gKs': 50, 'gKf': 24.1, 'gNa': 100, 'gNaP': 0.8}
+#PAR = {'gleak': 6.8, 'gKs': 50, 'gKf': 24.1, 'gNa': 100, 'gNaP': 0.8}
