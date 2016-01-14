@@ -1,8 +1,8 @@
-parnames = {1:'I', 2:'gleak', 3:'gKs', 4: 'gKf', 5: 'gNa', 6: 'gNaP', 7:'freq'}  # , 8:'Iks', 9:'Ikf', 11:'INa', 12:'INap'
+parnames = {1:'I', 2:'gleak', 3:'gKs', 4: 'gKf', 5: 'gNa', 6: 'gNaP', 7:'freq'}
 unames = {1:'V', 2:'mKs', 3: 'mKf', 4: 'hKf', 5:'hKf2', 6:'mNa', 7:'hNa', 8:'mNaP'}
 
 NDIM = 8, IPS = 2, IRS = 0, ILP = 0  # IPS=2 detects periodic solutions
-ICP = ['I', 'PERIOD', 'gleak', 'gKs', 'freq']  # do NOT use overspecification here, otherwise MAX V will be overwritten by a parameter value
+ICP = ['I', 'PERIOD', 2, 3, 'freq']  # do NOT use overspecification here, otherwise MAX V will be overwritten by a parameter value
 
 NTST = 200, NCOL = 4, IAD = 3, ISP =  2, ISW = 1, IPLT = -1
 NMX = 5000, NPR = 1000, IID = 2, ITMX = 10, ITNW = 7, NWTN = 3
@@ -12,5 +12,3 @@ DS = 0.01, DSMIN = 1e-10, DSMAX = 0.02, IADS = 1
 
 UZSTOP = {'I': [-20, 100], 'PERIOD': [0, 100]}
 STOP = ['PD1']
-
-#PAR = {'gleak': 6.8, 'gKs': 50, 'gKf': 24.1, 'gNa': 100, 'gNaP': 0.8}

@@ -9,5 +9,3 @@ NMX = 50000, NPR = 10000, IID = 2, ITMX = 10, ITNW = 7, NWTN = 5
 
 EPSL = 1e-7, EPSU = 1e-7, EPSS = 1e-5
 DS = 0.001, DSMIN = 1e-9, DSMAX = 0.1, IADS = 1
-
-PAR = {'I': -12, 'gleak': 6.8, 'gKs': 50, 'gKf': 24.1, 'gNa': 100, 'gNaP': 0.8}
